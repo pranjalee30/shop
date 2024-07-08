@@ -23,7 +23,7 @@ const App = () => {
       <Navbar cartCount={cartItems.length} />
       <main className="page-content">
         <Routes>
-          <Route path="/" element={<Home addToCart={addToCart} />} />
+          <Route path="/shop" element={<Home addToCart={addToCart} />} />
           <Route
             path="/cart"
             element={
