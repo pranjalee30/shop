@@ -1,0 +1,58 @@
+/* src/components/CartItem.css */
+
+/* Cart Item Container */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 1rem; /* Space between items */
+}
+
+/* Cart Item Image */
+.cart-item-image {
+  width: 6rem; /* Fixed width */
+  height: 6rem; /* Fixed height */
+  object-fit: cover; /* Cover the area */
+  border-radius: 4px; /* Slightly rounded corners */
+  margin-right: 1rem; /* Space between image and text */
+}
+
+/* Cart Item Information */
+.cart-item-info {
+  flex: 1; /* Take the remaining space */
+}
+
+/* Cart Item Title */
+.cart-item-title {
+  font-size: 1rem; /* text-base */
+  font-weight: 600; /* Semi-bold */
+  color: #333333; /* Dark text color */
+  margin-bottom: 0.5rem; /* Space below title */
+}
+
+/* Cart Item Price */
+.cart-item-price {
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* Gray text */
+  margin-bottom: 0.5rem; /* Space below price */
+}
+
+/* Remove Button */
+.cart-item-remove-button {
+  background-color: #ef4444; /* Red-500 */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600; /* Semi-bold */
+  transition: background-color 0.3s ease;
+}
+
+.cart-item-remove-button:hover {
+  background-color: #dc2626; /* Darker red on hover */
+}

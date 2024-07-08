@@ -1,0 +1,51 @@
+/* src/pages/Cart.css */
+
+/* Cart Container */
+.cart-container {
+  background-color: #f9fafb; /* Light gray background */
+  min-height: 100vh; /* Full viewport height */
+  padding: 2rem; /* Padding around the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cart Title */
+.cart-title {
+  font-size: 2rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #1f2937; /* Dark Slate Gray */
+  margin-bottom: 2rem; /* Space below the title */
+  text-align: center;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+  font-size: 1.25rem; /* text-xl */
+  color: #4b5563; /* Gray-600 */
+  text-align: center;
+}
+
+/* Cart Item List */
+.cart-item-list {
+  width: 100%;
+  max-width: 1200px; /* Max width for large screens */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between cart items */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 1rem; /* Less padding on small screens */
+  }
+
+  .cart-title {
+    font-size: 1.5rem; /* Smaller title for small screens */
+  }
+
+  .empty-cart-message {
+    font-size: 1rem; /* Smaller message text */
+  }
+}

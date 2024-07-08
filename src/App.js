@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
 
-function App() {
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import "./App.css"; // Import the CSS file
+
+const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems((prevItems) => [...prevItems, product]);
+  };
+
+  const removeFromCart = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Navbar cartCount={cartItems.length} />
+      <main className="page-content">
+        <Routes>
+          <Route path="/" element={<Home addToCart={addToCart} />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+            }
+          />
+        </Routes>
+      </main>
+      <footer className="footer">
+        <p>© 2024 My E-commerce App. All rights reserved.</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;

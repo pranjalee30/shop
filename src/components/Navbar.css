@@ -1,0 +1,63 @@
+/* src/components/Navbar.css */
+
+/* Navbar Container */
+.navbar {
+  background-color: #1e293b; /* Slate-900 */
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #fff; /* White text */
+  position: relative; /* Allows for positioning child elements */
+}
+
+/* Navbar Content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand */
+.brand-logo {
+  height: 4rem;
+  width: 12rem;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 2rem; /* Space between menu items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  font-size: 2rem; /* text-base */
+  font-weight: 600; /* font-semibold */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e5e7eb; /* Light gray on hover */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem; /* Reduced space between items */
+  }
+
+  .nav-link {
+    font-size: 0.875rem; /* text-sm */
+  }
+
+  /* Adjust padding for mobile view */
+  .navbar {
+    padding: 1rem 1rem;
+  }
+}
