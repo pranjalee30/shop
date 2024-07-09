@@ -1,7 +1,7 @@
 // src/pages/Home.js
 
 import React, { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "./ProductCard";
 import { fetchProducts } from "../api";
 import "./Home.css";
 

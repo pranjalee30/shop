@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import "./App.css"; // Import the CSS file
+import Home from "./components/Home";
+import Cart from "./components/Cart";
+import "./App.css";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -23,7 +23,7 @@ const App = () => {
       <Navbar cartCount={cartItems.length} />
       <main className="page-content">
         <Routes>
-          <Route path="/shop" element={<Home addToCart={addToCart} />} />
+          <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route
             path="/cart"
             element={
